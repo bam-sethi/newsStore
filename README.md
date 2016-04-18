@@ -11,6 +11,12 @@ Run:  `npm install`
 
 Start up the Mongo Server : `mongod`
 
+Run: `nodemon app.js`
+ or 
+    `node app.js` (if you don't have nodemon)
+
+
+
 
 
 
