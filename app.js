@@ -5,7 +5,6 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
 var faker = require('faker')
-// var http = require('http');
 
 app.use(express.static(__dirname + '/app'))
 app.use(bodyParser.json());
@@ -22,6 +21,7 @@ app.get('/', function(req, res){
 })
 
 
+
 app.get('/news', function(req, res){
   News.find({}, function(err, data){
     if(err){
@@ -32,22 +32,16 @@ app.get('/news', function(req, res){
   })
 })
 
-function generateData(){
-  var fakerObject = {
-    title : faker.lorem.word(),
-    summary : faker.lorem.sentence(),
-    description : faker.lorem.sentences(),
-    image : faker.image.cats()
-  }
-  return fakerObject;
-}
+var imagesArray = ['images/1.jpg', 'images/2.jpg','images/3.jpg','images/4.jpg','images/5.jpg','images/6.jpg','images/7.jpg','images/8.jpg', 'images/9.jpg', 'images/10.jpg']
+
 
 function createNewsItem(){
+  var n = Math.round((Math.random() * 9))
   var news = new News({
     title: faker.lorem.word(),
     summary: faker.lorem.sentence(),
     description: faker.lorem.sentences(),
-    image: faker.image.image()
+    image: imagesArray[n]
   });
   // console.log(news)
   news.save(function(err, news) {

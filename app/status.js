@@ -1,5 +1,5 @@
 function checkConnectionStatus(stat, connected){
-  var status = document.getElementById("status")
+  var status = document.getElementById("title")
   if(connected){
     status.classList.add('online')
     status.classList.remove('offline')

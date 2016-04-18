@@ -1,34 +1,52 @@
+body{
+  background-color: #D3D3D3;
+  font-family: helvetica;
+}
+
 .container{
   text-align: center;
   margin: 0 auto;
+  max-width: 60%;
 }
 
 .title-container{
+  font-size: 80px;
+  color: white;
+  text-align: center;
 }
 
 #status{
-  
+  border-bottom: 5px solid;
 }
 
 .online{
-  color: green;
+  background-color: green;
 }
 
 .offline{
-  color: red;
+  background-color: red;
 }
 
-#container-list{
-
+.list{
+  margin: 0 auto;
+  text-align: center;
 }
 
 .items{
   list-style: none;
-  min-height: 100px;
-  text-align: left;
-  border: 1px solid white;
+  /*text-align: left;*/
   border-radius: 5px;
-  background: #4169E1;
+  background: white;
   margin: 5px;
-  color: white;
+  display: inline-block;
+  float: left;
+  max-height: 400px;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+p{
+  width: 240px;
+  text-align: left;
+  padding: 5px;
 }
