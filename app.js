@@ -4,7 +4,8 @@ var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
-var http = require('http');
+var faker = require('faker')
+// var http = require('http');
 
 app.use(express.static(__dirname + '/app'))
 app.use(bodyParser.json());
@@ -13,20 +14,6 @@ mongoose.connect('mongodb://localhost:27017/news_data_store');
 
 require("./models/news");
 var News = mongoose.model("News");
-
-var NEWSITEM = new News({
-  title: 'London NEWS',
-  summary: 'bkhdfghkadsf',
-  description: 'abfdf',
-  image: 'http://www.mactrast.com/wp-content/uploads/2015/01/apple-macintosh-1984-history.jpg'
-});
-
-
-NEWSITEM.save(function(err, news) {
-  if (err) console.log(err);
-  console.log('NEWS Saved!');
-});
-
 
 // root route
 app.get('/', function(req, res){
@@ -45,27 +32,32 @@ app.get('/news', function(req, res){
   })
 })
 
-function getGuardianApiData(){
-  http.get({
-    host: 'content.guardianapis.com',
-    path: '/search?api-key=sn5j9ay45s4kphs5cxkm6n2y'
-  }, function(response){
-    console.log(response)
-    var body = '';
-    response.on('data', function(d){
-       body += d;
-    });
-    response.on('end', function(){
-      var res = JSON.parse(body);
-      var data = res.response.results
-      var title = data[0].webTitle
-      console.log()
-    });
-  });  
+function generateData(){
+  var fakerObject = {
+    title : faker.lorem.word(),
+    summary : faker.lorem.sentence(),
+    description : faker.lorem.sentences(),
+    image : faker.image.cats()
+  }
+  return fakerObject;
 }
 
+function createNewsItem(){
+  var news = new News({
+    title: faker.lorem.word(),
+    summary: faker.lorem.sentence(),
+    description: faker.lorem.sentences(),
+    image: faker.image.image()
+  });
+  // console.log(news)
+  news.save(function(err, news) {
+    if (err) console.log(err);
+    // console.log('NEWS Saved!');
+  });
+}
 
-getGuardianApiData();
-
+for(var i =0; i < 10; i++){
+  createNewsItem()
+}
 
 app.listen(3000);
