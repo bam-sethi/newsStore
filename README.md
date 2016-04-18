@@ -12,11 +12,13 @@ In command line:
 
 Run:  `npm install`
 
-Start up the Mongo Server : `mongod`
+Start up the Mongo Server : `mongo`
 
 Run: `nodemon app.js`
  or 
     `node app.js` (if you don't have nodemon)
+
+Go To: `localhost:3000` in your browser
 
 
 
