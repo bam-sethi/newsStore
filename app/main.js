@@ -30,9 +30,24 @@ function addElements(data){
   var ul = document.getElementById("list-container");
 
   for(var i = 0; i < data.length; i ++){
-    var li = document.createElement("li");
     var content = data[i];
-    li.appendChild(document.createTextNode(content.title));
+    var li = document.createElement("li");
+    var head = document.createElement("h1")
+    var p = document.createElement("p");
+    var img = new Image(150, 150);
+    img.src = content.image
+    img.classList.add('news-image')
+    
+
+    li.appendChild(head);
+    li.appendChild(p);
+    li.classList.add('items')
+    
+
+    head.appendChild(document.createTextNode(content.title));
+    li.appendChild(img);
+    p.appendChild(document.createTextNode(content.summary));
+    p.appendChild(document.createTextNode(content.description));
     ul.appendChild(li)
   }
 }

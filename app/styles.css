@@ -1,9 +1,9 @@
 .container{
-
+  text-align: center;
+  margin: 0 auto;
 }
 
 .title-container{
-  text-align: center;
 }
 
 #status{
@@ -20,4 +20,15 @@
 
 #container-list{
 
+}
+
+.items{
+  list-style: none;
+  min-height: 100px;
+  text-align: left;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: #4169E1;
+  margin: 5px;
+  color: white;
 }
