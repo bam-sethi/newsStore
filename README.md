@@ -4,21 +4,25 @@ This app generates fake news data from using Node.Js and Mongo server.
 
 Using HTML5 application cache for offline usage.
 
-Fake News Data (Lorem Ipsum) generated using Faker.Js 
+Fake News Data generated using Faker.Js 
 
 #Set up Instructions
 
-In command line:
+From Command Line:
 
-Run:  `npm install`
+- Clone the repository
+git clone https://github.com/bam-sethi/newsStore.git
+then `cd` into it
 
-Start up the Mongo Server : `mongo`
+- From the main directory run:  `npm install`
 
-Run: `nodemon app.js`
+- Start up your Mongo Server : `mongo`
+
+- Run: `nodemon app.js`
  or 
     `node app.js` (if you don't have nodemon)
 
-Go To: `localhost:3000` in your browser
+- Go To: `localhost:3000` in your browser
 
 
 
