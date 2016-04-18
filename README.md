@@ -1,6 +1,9 @@
 # Offline / Online News Store
 
-This app generates fake news data from using Node.Js and Mongo server
+This app generates fake news data from using Node.Js and Mongo server.
+
+Using HTML5 application cache for offline usage.
+
 Fake News Data (Lorem Ipsum) generated using Faker.Js 
 
 #Set up Instructions
