@@ -24,8 +24,11 @@ then `cd` into it
 
 - Go To: `localhost:3000` in your browser
 
-
-
+To Do:
+-Testing
+-Include Search, Authentication, Updating
+-Use real News API
+-Made the UX a bit more interesting
 
 
 
