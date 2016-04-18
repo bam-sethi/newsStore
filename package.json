@@ -1,0 +1,18 @@
+{
+  "name": "news-store",
+  "version": "1.0.0",
+  "description": "news-store-api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd FE/ && npm start && nodemon app.js"
+  },
+  "author": "ambar sethi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongodb": "^2.1.16",
+    "mongoose": "^4.4.12"
+  }
+}
