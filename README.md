@@ -6,7 +6,7 @@ Using HTML5 application cache for offline usage.
 
 Fake News Data generated using Faker.Js 
 
-#Set up Instructions
+##Getting Started
 
 From Command Line:
 
@@ -24,11 +24,11 @@ then `cd` into it
 
 - Go To: `localhost:3000` in your browser
 
-To Do:
--Testing
--Include Search, Authentication, Updating
--Use real News API
--Made the UX a bit more interesting
+##To Do:
+- Testing
+- Include Search, Authentication, Updating
+- Use real News API
+- Made the UX a bit more interesting
 
 
 
